@@ -1,0 +1,41 @@
+package sismo;
+
+import repast.simphony.space.continuous.ContinuousSpace;
+import repast.simphony.space.grid.Grid;
+import repast.simphony.space.grid.GridPoint;
+
+public class Civil {
+	private ContinuousSpace<Object> space;
+	private Grid<Object> grid;
+	double velocidad;
+	boolean panico;
+	double p; //variable aleatoria inicial (0,1) para el panico
+	int r; //radio de vision
+	int k; //umbral para entrar en panico
+	
+	public Civil(ContinuousSpace<Object> space, Grid<Object> grid, double velocidad, double p, int r, int k) {
+		this.space = space;
+		this.grid = grid;
+		this.panico = false;
+		this.velocidad = velocidad;
+		this.p = p;
+		this.r = r;
+		this.k = k;
+	}
+	
+	
+	//methods
+	public void step() {
+		//obtener la ubicación en el grid del civil
+		GridPoint pt = grid.getLocation(this);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
